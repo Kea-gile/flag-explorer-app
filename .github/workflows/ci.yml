@@ -19,6 +19,11 @@ jobs:
         with:
           node-version: 18
 
+      - name: Cleanup node_modules
+        run: |
+          cd backend
+          rm -rf node_modules package-lock.json
+
       - name: Install dependencies
         run: cd backend && npm install
 
